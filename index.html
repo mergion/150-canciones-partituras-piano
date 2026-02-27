@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Música con Cristo - Repertorio Católico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              emerald: {
+                450: '#10b981', // Custom accent
+              }
+            },
+            animation: {
+              'scroll': 'scroll 40s linear infinite',
+            },
+            keyframes: {
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #34d399;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #10b981;
+      }
+      .hide-scroll-bar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+</head>
+  <body class="bg-gray-50 text-gray-900 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
